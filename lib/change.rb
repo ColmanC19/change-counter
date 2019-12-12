@@ -9,11 +9,8 @@ class Change
           val = "#{value}".to_i
           ring = "#{key}"
               divisible = (whole / value).to_i
-              puts whole
               remainder = (whole -= (divisible * val))
               array.push("#{divisible.to_i} #{ring}")
-              puts divisible
-              puts remainder
 
       end
       return array.join(", ")
