@@ -4,7 +4,6 @@ class Allergy
     array = []
     person = number.to_i
     score.each do |key, value|
-      puts person
       allergen = "#{key}"
       total = "#{value}".to_i
       divisible = (person / total).to_i
@@ -21,6 +20,6 @@ class Allergy
 
 
     end
-    return array.join(", ")
+    return "You are allergic to #{array.join(", ")}"
   end
 end

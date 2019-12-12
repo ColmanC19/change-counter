@@ -3,7 +3,12 @@ class Change
 
   def make_change(number)
     coins = {"quarter" => 25, "dime" => 10, "nickle" => 5, "penny" => 1}
-    whole = number.delete!(".").to_f
+    new = number
+    if new.include?(".")
+      whole = new.delete!(".").to_f
+    else
+      whole = new.concat("00").to_i
+    end
     array = []
           coins.each do |key, value|
           val = "#{value}".to_i
